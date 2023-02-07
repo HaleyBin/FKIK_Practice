@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FKIK</string>
+    <string name="Tab1">Command</string>
+    <string name="Tab2">Control</string>
+    <string name="Tab3">Joints</string>
+    <string name="Tab4">Settings</string>
+    <string name="StopDescription">비상 정지 버튼</string>
+</resources>
