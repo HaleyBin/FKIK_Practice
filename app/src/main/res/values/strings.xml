@@ -1,8 +1,39 @@
 <resources>
+
     <string name="app_name">FKIK</string>
     <string name="Tab1">Command</string>
-    <string name="Tab2">Control</string>
+    <string name="Tab2">Remote</string>
     <string name="Tab3">Joints</string>
     <string name="Tab4">Settings</string>
     <string name="StopDescription">비상 정지 버튼</string>
+    <string name="space">" "</string>
+
+
+    <string name="Remote_BT_Description">원격 조종 버튼</string>
+    <string name="Remote_XYRC">X-Y Remote Control</string>
+    <string name="Remote_XZRC">X-Z Remote Control</string>
+
+
+    <string name="Joints_JI">Joints Information</string>
+    <string name="Joints_CI">Cartesian Information</string>
+    <string name="Joints_J1">Joint1"  "</string>
+    <string name="Joints_J2">Joint2"  "</string>
+    <string name="Joints_J3">Joint3"  "</string>
+    <string name="Joints_J4">Joint4"  "</string>
+    <string name="Joints_J5">Joint5"  "</string>
+    <string name="Joints_J6">Joint6"  "</string>
+    <string name="Gripper">Gripper</string>
+    <string name="Joints_Joint_Control">Joint Control 및 값 확인용 텍스트 필드</string>
+    <string name="move_joint_bt">동작</string>
+    <string name="Joints_x">X"        "</string>
+    <string name="Joints_Y">Y"        "</string>
+    <string name="Joints_Z">Z"        "</string>
+    <string name="Joints_Roll">Roll"   "</string>
+    <string name="Joints_Pitch">Pitch" "</string>
+    <string name="Joints_Yaw">Yaw"   "</string>
+    <string name="Joints_Cartesian_Control">Cartesian Control 및 값 확인용 텍스트 필드</string>
+    <string name="move_cartesian_bt">동작</string>
+
+
+
 </resources>
