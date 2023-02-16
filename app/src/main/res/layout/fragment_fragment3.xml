@@ -37,7 +37,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_J1"
+                    android:text="@string/Remote_J1"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
                     android:id="@+id/Textfield_J1"
-                    android:hint="@string/Joints_Joint_Control"
+                    android:hint="@string/Remote_Control"
                     android:inputType="number"
                     />
             </LinearLayout>
@@ -58,7 +58,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_J2"
+                    android:text="@string/Remote_J2"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
                     android:id="@+id/Textfield_J2"
-                    android:hint="@string/Joints_Joint_Control"
+                    android:hint="@string/Remote_Control"
                     android:inputType="number"
                     />
             </LinearLayout>
@@ -79,7 +79,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_J3"
+                    android:text="@string/Remote_J3"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
                     android:id="@+id/Textfield_J3"
-                    android:hint="@string/Joints_Joint_Control"
+                    android:hint="@string/Remote_Control"
                     android:inputType="number"
                     />
             </LinearLayout>
@@ -100,7 +100,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_J4"
+                    android:text="@string/Remote_J4"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -108,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
                     android:id="@+id/Textfield_J4"
-                    android:hint="@string/Joints_Joint_Control"
+                    android:hint="@string/Remote_Control"
                     android:inputType="number"
                     />
             </LinearLayout>
@@ -121,7 +121,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_J5"
+                    android:text="@string/Remote_J5"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -129,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
                     android:id="@+id/Textfield_J5"
-                    android:hint="@string/Joints_Joint_Control"
+                    android:hint="@string/Remote_Control"
                     android:inputType="number"
                     />
             </LinearLayout>
@@ -142,7 +142,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_J6"
+                    android:text="@string/Remote_J6"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
                     android:id="@+id/Textfield_J6"
-                    android:hint="@string/Joints_Joint_Control"
+                    android:hint="@string/Remote_Control"
                     android:inputType="number"
                     />
             </LinearLayout>
@@ -163,7 +163,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Gripper"
+                    android:text="@string/Remote_Gripper"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -171,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
                     android:id="@+id/Textfield_Gripper"
-                    android:hint="@string/Joints_Joint_Control"
+                    android:hint="@string/Remote_Control"
                     android:inputType="text"
                     />
             </LinearLayout>
@@ -192,7 +192,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/move_joint_bt"
+                android:text="@string/Remote_move_button"
                 android:textSize="25sp"
                 android:textAlignment="center"
                 android:id="@+id/Joints_moveJoint_bt"
@@ -222,7 +222,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_x"
+                    android:text="@string/Remote_x"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -243,7 +243,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_Y"
+                    android:text="@string/Remote_Y"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -264,7 +264,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_Z"
+                    android:text="@string/Remote_Z"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -285,7 +285,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_Roll"
+                    android:text="@string/Remote_Roll"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -306,7 +306,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_Pitch"
+                    android:text="@string/Remote_Pitch"
                     android:textSize="25sp"
                     />
                 <EditText
@@ -327,7 +327,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Joints_Yaw"
+                    android:text="@string/Remote_Yaw"
                     android:textSize="25sp"
                     />
                 <EditText
