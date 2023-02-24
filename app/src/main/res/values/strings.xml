@@ -22,7 +22,7 @@
     <string name="Remote_J5">Joint5"    "</string>
     <string name="Remote_J6">Joint6"    "</string>
     <string name="Remote_Gripper">Gripper</string>
-    <string name="Remote_Control">Remote Control</string>
+    <string name="Remote_Control">Remote Control Value Default msg</string>
     <string name="Remote_move_button">동작</string>
     <string name="Remote_x">X"             "</string>s
     <string name="Remote_Y">Y"             "</string>
@@ -32,13 +32,4 @@
     <string name="Remote_Yaw">Yaw"         "</string>
     <string name="Remote_ToggleButton_Off">Joint</string>
     <string name="Remote_ToggleButton_On">Cartesian</string>
-
-
-    <string name="Joints_JI">Joints Information</string>
-    <string name="Joints_CI">Cartesian Information</string>
-    <string name="Joints_Cartesian_Control">Cartesian Control 및 값 확인용 텍스트 필드</string>
-    <string name="move_cartesian_bt">동작</string>
-
-
-
 </resources>

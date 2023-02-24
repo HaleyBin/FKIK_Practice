@@ -12,9 +12,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final int FRAGMENT1 = 1;
     private final int FRAGMENT2 = 2;
     private final int FRAGMENT3 = 3;
-    private final int FRAGMENT4 = 4;
 
-    private Button bt_tab1, bt_tab2, bt_tab3, bt_tab4;
+    private Button bt_tab1, bt_tab2, bt_tab3;
     private ImageButton bt_stop;
 
     @Override
@@ -25,13 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_tab1 = (Button)findViewById(R.id.bt_tab1);
         bt_tab2 = (Button)findViewById(R.id.bt_tab2);
         bt_tab3 = (Button)findViewById(R.id.bt_tab3);
-        bt_tab4 = (Button)findViewById(R.id.bt_tab4);
         bt_stop = (ImageButton)findViewById(R.id.stop_button);
 
         bt_tab1.setOnClickListener(this);
         bt_tab2.setOnClickListener(this);
         bt_tab3.setOnClickListener(this);
-        bt_tab4.setOnClickListener(this);
         bt_stop.setOnClickListener(this);
 
         callFragment(FRAGMENT1);
@@ -57,11 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 transaction.replace(R.id.frame, fragment3);
                 transaction.commit();
                 break;
-            case 4:
-                Fragment4 fragment4 = new Fragment4();
-                transaction.replace(R.id.frame, fragment4);
-                transaction.commit();
-                break;
         }
     }
 
@@ -76,9 +68,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_tab3:
                 callFragment(FRAGMENT3);
-                break;
-            case R.id.bt_tab4:
-                callFragment(FRAGMENT4);
                 break;
             case R.id.stop_button:
                 //긴급 정지 패킷 발송 부분
