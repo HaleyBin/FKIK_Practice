@@ -9,6 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import android.Manifest;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -155,8 +156,8 @@ public class BluetoothSerialClient {
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
-            permission.checkPermission();
-            return null;
+            permission.requestPermission();
+            getPairedDevices(context);
         }
         Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
         return pairedDevices;
@@ -178,7 +179,8 @@ public class BluetoothSerialClient {
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
-            return permission.checkPermission();
+            permission.requestPermission();
+            scanDevices(context, OnScanListener);
         }
         if (mBluetoothAdapter.isDiscovering()) {
             mBluetoothAdapter.cancelDiscovery();
@@ -210,6 +212,8 @@ public class BluetoothSerialClient {
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
+            permission.requestPermission();
+            cancelScan(context);
             return;
         }
         if (!mBluetoothAdapter.isEnabled() || !mBluetoothAdapter.isDiscovering()) return;
@@ -249,7 +253,8 @@ public class BluetoothSerialClient {
                 //                                          int[] grantResults)
                 // to handle the case where the user grants the permission. See the documentation
                 // for ActivityCompat#requestPermissions for more details.
-                return;
+                permission.requestPermission();
+                connectClient(context);
             }
             mBluetoothSocket = mConnectedDevice.createRfcommSocketToServiceRecord(mUUID);
         } catch (IOException e) {
@@ -270,7 +275,8 @@ public class BluetoothSerialClient {
                         //                                          int[] grantResults)
                         // to handle the case where the user grants the permission. See the documentation
                         // for ActivityCompat#requestPermissions for more details.
-                        return;
+                        permission.requestPermission();
+                        run();
                     }
                     mBluetoothAdapter.cancelDiscovery();
                     mBluetoothSocket.connect();
@@ -418,7 +424,7 @@ public class BluetoothSerialClient {
             if (!btAdapter.isEnabled()) {
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
                     // here to request the missing permissions, and then overriding
@@ -426,6 +432,7 @@ public class BluetoothSerialClient {
                     //                                          int[] grantResults)
                     // to handle the case where the user grants the permission. See the documentation
                     // for ActivityCompat#requestPermissions for more details.
+                    requestPermissions(Manifest.permission.BLUETOOTH_CONNECT, 2);
                     return;
                 }
                 startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);

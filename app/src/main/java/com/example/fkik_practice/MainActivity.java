@@ -1,5 +1,6 @@
 package com.example.fkik_practice;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button bt_tab1, bt_tab2, bt_tab3;
     private ImageButton bt_stop;
+    public static BluetoothSerialClient client = BluetoothSerialClient.getInstance();
+    private PermissionSupport permission;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         callFragment(FRAGMENT1);
 
+        permissionCheck();
     }
 
     private void callFragment(int fragment_no) {
@@ -57,6 +62,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    private void permissionCheck(){
+        permission = new PermissionSupport(this, this);
+        if(!permission.checkPermission()){
+            permission.requestPermission();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(!permission.permissionResult(requestCode, permissions, grantResults)){
+            permission.requestPermission();
+        }
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -73,5 +93,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //긴급 정지 패킷 발송 부분
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        client.claer();
     }
 }
