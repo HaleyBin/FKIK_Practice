@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button bt_tab1, bt_tab2, bt_tab3;
     private ImageButton bt_stop;
-    private PermissionSupport permission;
-
     BluetoothAdapter mBluetoothAdapter;
     Set<BluetoothDevice> mPairedDevices;
     List<String> mListPairedDevices;
@@ -54,8 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     final static int BT_MESSAGE_READ = 2;
     final static int BT_CONNECTING_STATUS = 3;
     final static UUID BT_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +68,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_tab3.setOnClickListener(this);
         bt_stop.setOnClickListener(this);
 
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
         callFragment(FRAGMENT1);
         mContext = this;
-        permissionCheck();
+        //permissionCheck();
     }
 
     private void callFragment(int fragment_no) {
@@ -165,7 +163,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //                                          int[] grantResults)
                 // to handle the case where the user grants the permission. See the documentation
                 // for ActivityCompat#requestPermissions for more details.
-                permissionCheck();
                 return;
             }
             mPairedDevices = mBluetoothAdapter.getBondedDevices();
@@ -232,14 +229,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //Toast.makeText(getApplicationContext(), "블루투스 연결 중 오류가 발생했습니다.", Toast.LENGTH_LONG).show();
             Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
             connectSelectedDevice(selectedDeviceName);
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(!permission.permissionResult(requestCode, permissions, grantResults)){
-            permission.requestPermission();
         }
     }
 
@@ -345,21 +334,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
-            permissionCheck();
             return null;
         }
         return device.createRfcommSocketToServiceRecord(BT_UUID);
-    }
-
-    private void permissionCheck() {
-
-        // PermissionSupport.java 클래스 객체 생성
-        permission = new PermissionSupport(this, this);
-
-        // 권한 체크 후 리턴이 false로 들어오면
-        if (!permission.checkPermission()) {
-            //권한 요청
-            permission.requestPermission();
-        }
     }
 }

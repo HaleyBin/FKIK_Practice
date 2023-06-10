@@ -6,22 +6,22 @@
     android:layout_height="match_parent"
     android:weightSum="10"
     android:orientation="horizontal"
-    android:layout_margin="50dp"
+    android:layout_margin="20dp"
     >
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="5"
+        android:layout_weight="6"
         android:orientation="vertical"
-        android:paddingLeft="100dp"
+        android:paddingLeft="50dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="25dp"
             >
             <ToggleButton
                 android:layout_width="400dp"
@@ -32,7 +32,6 @@
                 android:background="@color/design_default_color_primary"
                 android:textColor="@color/white"
                 android:textSize="25sp"
-
                 />
 
         </LinearLayout>
@@ -44,10 +43,11 @@
             android:layout_margin="20dp"
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 android:text="@string/Remote_J1"
                 android:id="@+id/Remote_TextView_Joint1X"
+                android:textColor="#000000"
                 android:textSize="25sp"
                 />
 
@@ -57,6 +57,9 @@
                 android:textSize="25sp"
                 android:id="@+id/Remote_EditText_Joint1X"
                 android:hint="@string/Remote_Control"
+                android:textColorHint="#7f000000"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="number"
                 android:textAlignment="center"
                 />
@@ -70,10 +73,11 @@
             android:layout_margin="20dp"
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 android:text="@string/Remote_J2"
                 android:id="@+id/Remote_TextView_Joint2Y"
+                android:textColor="#000000"
                 android:textSize="25sp"
                 />
 
@@ -83,6 +87,9 @@
                 android:textSize="25sp"
                 android:id="@+id/Remote_EditText_Joint2y"
                 android:hint="@string/Remote_Control"
+                android:textColorHint="#7f000000"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="number"
                 android:textAlignment="center"
                 />
@@ -96,10 +103,11 @@
             android:layout_margin="20dp"
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 android:text="@string/Remote_J3"
                 android:id="@+id/Remote_TextView_Joint3z"
+                android:textColor="#000000"
                 android:textSize="25sp"
                 />
 
@@ -109,6 +117,9 @@
                 android:textSize="25sp"
                 android:id="@+id/Remote_EditText_Joint3z"
                 android:hint="@string/Remote_Control"
+                android:textColorHint="#7f000000"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="number"
                 android:textAlignment="center"
                 />
@@ -122,10 +133,11 @@
             android:layout_margin="20dp"
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 android:text="@string/Remote_J4"
                 android:id="@+id/Remote_TextView_Joint4Roll"
+                android:textColor="#000000"
                 android:textSize="25sp"
                 />
 
@@ -135,6 +147,9 @@
                 android:textSize="25sp"
                 android:id="@+id/Remote_EditText_Joint4Roll"
                 android:hint="@string/Remote_Control"
+                android:textColorHint="#7f000000"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="number"
                 android:textAlignment="center"
                 />
@@ -147,10 +162,11 @@
             android:layout_margin="20dp"
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 android:text="@string/Remote_J5"
                 android:id="@+id/Remote_TextView_Joint5Pitch"
+                android:textColor="#000000"
                 android:textSize="25sp"
                 />
 
@@ -160,6 +176,9 @@
                 android:textSize="25sp"
                 android:id="@+id/Remote_EditText_Joint5Pitch"
                 android:hint="@string/Remote_Control"
+                android:textColorHint="#7f000000"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="number"
                 android:textAlignment="center"
                 />
@@ -173,10 +192,11 @@
             android:layout_margin="20dp"
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 android:text="@string/Remote_J6"
                 android:id="@+id/Remote_TextView_Joint6Yaw"
+                android:textColor="#000000"
                 android:textSize="25sp"
                 />
             <EditText
@@ -185,6 +205,9 @@
                 android:textSize="25sp"
                 android:id="@+id/Remote_EditText_Joint6Yaw"
                 android:hint="@string/Remote_Control"
+                android:textColorHint="#7f000000"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="number"
                 android:textAlignment="center"
                 />
@@ -194,13 +217,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="20dp">
+            >
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/Remote_move_button"
                 android:id="@+id/Remote_Button_Move"
+                android:background="@color/design_default_color_primary"
                 android:textSize="25sp"
                 />
         </LinearLayout>
@@ -231,6 +255,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Pre"
                 android:id="@+id/Remote_Button_Joint1X_Pre"
+                android:background="@color/design_default_color_primary"
                 android:textSize="25sp"
                 />
             <Button
@@ -238,6 +263,8 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Next"
                 android:id="@+id/Remote_Button_Joint1X_Next"
+                android:background="@color/design_default_color_primary"
+                android:layout_marginLeft="10sp"
                 android:textSize="25sp"
                 />
 
@@ -253,6 +280,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Pre"
                 android:id="@+id/Remote_Button_Joint2y_Pre"
+                android:background="@color/design_default_color_primary"
                 android:textSize="25sp"
                 />
             <Button
@@ -260,6 +288,8 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Next"
                 android:id="@+id/Remote_Button_Joint2y_Next"
+                android:background="@color/design_default_color_primary"
+                android:layout_marginLeft="10sp"
                 android:textSize="25sp"
                 />
         </LinearLayout>
@@ -274,6 +304,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Pre"
                 android:id="@+id/Remote_Button_Joint3z_Pre"
+                android:background="@color/design_default_color_primary"
                 android:textSize="25sp"
                 />
             <Button
@@ -281,6 +312,8 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Next"
                 android:id="@+id/Remote_Button_Joint3z_Next"
+                android:background="@color/design_default_color_primary"
+                android:layout_marginLeft="10sp"
                 android:textSize="25sp"
                 />
         </LinearLayout>
@@ -296,6 +329,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Pre"
                 android:id="@+id/Remote_Button_Joint4Roll_Pre"
+                android:background="@color/design_default_color_primary"
                 android:textSize="25sp"
                 />
             <Button
@@ -303,6 +337,8 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Next"
                 android:id="@+id/Remote_Button_Joint4Roll_Next"
+                android:background="@color/design_default_color_primary"
+                android:layout_marginLeft="10sp"
                 android:textSize="25sp"
                 />
         </LinearLayout>
@@ -318,6 +354,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Pre"
                 android:id="@+id/Remote_Button_Joint5Pitch_Pre"
+                android:background="@color/design_default_color_primary"
                 android:textSize="25sp"
                 />
             <Button
@@ -325,6 +362,8 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Next"
                 android:id="@+id/Remote_Button_Joint5Pitch_Next"
+                android:background="@color/design_default_color_primary"
+                android:layout_marginLeft="10sp"
                 android:textSize="25sp"
                 />
 
@@ -340,6 +379,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Pre"
                 android:id="@+id/Remote_Button_Joint6Yaw_Pre"
+                android:background="@color/design_default_color_primary"
                 android:textSize="25sp"
                 />
             <Button
@@ -347,6 +387,8 @@
                 android:layout_height="match_parent"
                 android:text="@string/Remote_Next"
                 android:id="@+id/Remote_Button_Joint6Yaw_Next"
+                android:background="@color/design_default_color_primary"
+                android:layout_marginLeft="10sp"
                 android:textSize="25sp"
                 />
         </LinearLayout>
